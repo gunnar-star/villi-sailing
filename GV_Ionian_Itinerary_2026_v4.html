@@ -3,755 +3,702 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Good Vibrations — Ionian &amp; Adriatic · June–July 2026</title>
+<title>Good Vibrations — Ionian June 2026</title>
 <style>
-:root {
-  --bg: #07111f;
-  --panel: #0e1c30;
-  --panel2: #132237;
-  --text: #eef4fb;
-  --muted: #8ea8c4;
-  --line: rgba(255,255,255,.07);
-  --gold: #d7b46a;
-  --sea: #5ba3e0;
-  --sea2: #7ec8e3;
-  --green: #7abf82;
-  --amber: #e8ac5a;
-  --red: #e8827a;
-  --purple: #a78bdc;
+:root{
+  --bg:#0b1320;--panel:#0f1929;--panel2:#14223a;
+  --text:#eef4fb;--muted:#8da3be;--faint:#5a7291;
+  --line:rgba(255,255,255,.07);--lineb:rgba(255,255,255,.12);
+  --gold:#d4a843;--gold2:#e8c870;--sea:#6bb8f5;--sea2:#a8d8ff;
+  --green:#79c283;--amber:#e8a84a;--red:#e88080;
+  --r:20px;--r2:14px;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-a { color: var(--sea); text-decoration: none; }
-a:hover { text-decoration: underline; }
-img { display: block; max-width: 100%; }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--sea);text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
 
-/* ── Shell ── */
-.shell { max-width: 1100px; margin: 0 auto; padding: 0 16px 80px; }
+/* ── Layout ── */
+.shell{max-width:1160px;margin:0 auto;padding:0 16px 80px}
 
 /* ── Hero ── */
-.hero {
-  position: relative;
-  min-height: 420px;
-  display: flex;
-  align-items: flex-end;
-  padding: 40px 36px;
-  border-radius: 0 0 28px 28px;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-.hero-bg {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, #071826 0%, #0c2840 40%, #061520 100%);
-}
-.hero-bg img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: .28;
-}
-.hero-bg::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(7,17,31,.92) 0%, rgba(7,17,31,.35) 60%, transparent 100%);
-}
-.hero-content { position: relative; z-index: 1; max-width: 680px; }
-.eyebrow {
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .18em;
-  color: var(--gold);
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.hero-content h1 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1;
-  letter-spacing: -.035em;
-  font-weight: 900;
-  margin-bottom: 14px;
-}
-.hero-content h1 em { color: var(--sea2); font-style: normal; }
-.hero-lede { font-size: 1.05rem; color: var(--muted); max-width: 56ch; margin-bottom: 24px; }
-.stat-row { display: flex; flex-wrap: wrap; gap: 20px; }
-.stat { display: flex; flex-direction: column; }
-.stat .sv { font-size: 1.3rem; font-weight: 800; color: var(--text); }
-.stat .sk { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-top: 2px; }
+.hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;border-radius:var(--r);overflow:hidden;margin-bottom:28px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(7,12,22,.95) 0%,rgba(7,12,22,.6) 50%,rgba(7,12,22,.2) 100%)}
+.hero-content{position:relative;z-index:2}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--gold);margin-bottom:10px}
+.hero h1{font-size:clamp(2.8rem,6vw,5.8rem);line-height:.93;letter-spacing:-.04em;font-weight:900;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero-lead{font-size:1.05rem;color:rgba(238,244,251,.75);max-width:54ch;line-height:1.7;margin-bottom:28px}
+.stat-row{display:flex;gap:20px;flex-wrap:wrap}
+.stat{text-align:center;padding:14px 20px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r2)}
+.stat .v{font-size:1.4rem;font-weight:800;color:var(--gold2);display:block}
+.stat .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
 
 /* ── Section headers ── */
-.section-label {
-  display: flex; align-items: center; gap: 10px;
-  margin: 40px 0 18px;
-}
-.section-label .bar { flex: 1; height: 1px; background: var(--line); }
-.section-label h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .16em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.phase-header{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:22px 0 14px;border-top:1px solid var(--lineb);margin-top:36px}
+.phase-header h2{font-size:1.55rem;font-weight:800;letter-spacing:-.02em}
+.phase-badge{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;padding:.3rem .9rem;border-radius:999px;border:1px solid var(--lineb);color:var(--muted);white-space:nowrap}
+.phase-intro{color:var(--muted);font-size:.94rem;margin-bottom:18px;max-width:70ch}
 
-/* ── Overview cards ── */
-.overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 14px; }
-.ov-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px 20px;
-}
-.ov-card .ov-icon { font-size: 1.4rem; margin-bottom: 8px; }
-.ov-card h3 { font-size: .96rem; font-weight: 700; margin-bottom: 4px; }
-.ov-card p { font-size: .85rem; color: var(--muted); }
-
-/* ── Phase strip ── */
-.phases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; border-radius: 14px; overflow: hidden; margin-bottom: 40px; }
-.phase {
-  padding: 14px 16px;
-  display: flex; flex-direction: column; gap: 4px;
-}
-.phase-outbound { background: rgba(91,163,224,.1); border: 1px solid rgba(91,163,224,.2); }
-.phase-ionian   { background: rgba(122,191,130,.1); border: 1px solid rgba(122,191,130,.2); }
-.phase-return   { background: rgba(215,180,106,.1); border: 1px solid rgba(215,180,106,.2); }
-.phase-croatia  { background: rgba(167,139,220,.1); border: 1px solid rgba(167,139,220,.2); }
-.phase .ph { font-size: .68rem; text-transform: uppercase; letter-spacing: .15em; font-weight: 700; }
-.phase-outbound .ph { color: var(--sea); }
-.phase-ionian .ph   { color: var(--green); }
-.phase-return .ph   { color: var(--amber); }
-.phase-croatia .ph  { color: var(--purple); }
-.phase h4 { font-size: .93rem; font-weight: 700; }
-.phase p  { font-size: .78rem; color: var(--muted); }
+/* ── Photo band ── */
+.photo-band{border-radius:var(--r);overflow:hidden;height:320px;margin-bottom:24px;position:relative}
+.photo-band img{object-position:center 40%}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(transparent,rgba(7,12,22,.85));font-size:.8rem;color:rgba(238,244,251,.7)}
 
 /* ── Day cards ── */
-.day-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  overflow: hidden;
-  margin-bottom: 14px;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.day-card.has-photo { grid-template-columns: 1fr 320px; }
-.day-body { padding: 22px 24px; }
-.day-photo { overflow: hidden; }
-.day-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: .88;
-  transition: opacity .3s;
-}
-.day-photo img:hover { opacity: 1; }
+.legs{display:grid;gap:14px}
+.leg{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.leg:hover{border-color:var(--lineb)}
+.leg-top{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:18px 20px 14px}
+.leg-num{width:44px;height:44px;border-radius:12px;background:rgba(212,168,67,.12);border:1px solid rgba(212,168,67,.25);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:800;color:var(--gold);flex-shrink:0;text-align:center;line-height:1.1}
+.leg-meta{}
+.leg-date{font-size:.76rem;color:var(--faint);text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+.leg-route{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.leg-why{font-size:.88rem;color:var(--muted)}
+.leg-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.18rem .55rem;border-radius:999px;border:1px solid}
+.tag.nm{color:#b8d8f8;border-color:rgba(107,184,245,.3);background:rgba(107,184,245,.08)}
+.tag.night{color:#c4b8f8;border-color:rgba(180,160,245,.3);background:rgba(180,160,245,.08)}
+.tag.crossing{color:var(--red);border-color:rgba(232,128,128,.35);background:rgba(232,128,128,.1);animation:pulse-red 2.5s ease-in-out infinite}
+.tag.guests{color:var(--green);border-color:rgba(121,194,131,.35);background:rgba(121,194,131,.1)}
+.tag.position{color:var(--amber);border-color:rgba(232,168,74,.35);background:rgba(232,168,74,.1)}
+@keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.6}}
 
-.day-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-.day-num {
-  font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em;
-  color: var(--gold);
-}
-.tag {
-  display: inline-block;
-  padding: .18rem .6rem;
-  border-radius: 999px;
-  font-size: .7rem;
-  font-weight: 700;
-  border: 1px solid transparent;
-}
-.tag-anchor    { background: rgba(91,163,224,.1); color: #8ac8f0; border-color: rgba(91,163,224,.2); }
-.tag-harbour   { background: rgba(126,200,227,.1); color: #a0d8ef; border-color: rgba(126,200,227,.2); }
-.tag-crossing  { background: rgba(232,130,122,.12); color: #f0a8a2; border-color: rgba(232,130,122,.25); }
-.tag-position  { background: rgba(232,172,90,.1); color: #f0cc8a; border-color: rgba(232,172,90,.2); }
-.tag-guest     { background: rgba(122,191,130,.1); color: #a0d8a8; border-color: rgba(122,191,130,.2); }
-.tag-rest      { background: rgba(167,139,220,.1); color: #c4b0ee; border-color: rgba(167,139,220,.2); }
-
-.day-card h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 4px; }
-.day-route { font-size: .88rem; font-weight: 700; color: var(--sea); margin-bottom: 10px; }
-.day-nm { color: var(--gold); }
-.day-desc { font-size: .9rem; color: var(--muted); margin-bottom: 14px; max-width: 60ch; }
-
-.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-.detail-box {
-  background: rgba(255,255,255,.025);
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  padding: 12px 14px;
-}
-.detail-box strong { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 6px; }
-.detail-box p, .detail-box ul { font-size: .85rem; color: var(--muted); }
-.detail-box ul { padding-left: 16px; display: grid; gap: 3px; }
-.detail-box.skipper-note { border-color: rgba(215,180,106,.2); background: rgba(215,180,106,.04); }
-.detail-box.skipper-note p { color: #e0c88a; }
+.leg-body{padding:0 20px 18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail-box{padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:var(--r2)}
+.detail-box strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:7px}
+.detail-box ul{list-style:none;display:grid;gap:4px}
+.detail-box li{font-size:.85rem;color:var(--muted);padding-left:12px;position:relative}
+.detail-box li::before{content:'·';position:absolute;left:0;color:var(--faint)}
+.detail-box p{font-size:.85rem;color:var(--muted)}
 
 /* ── Crossing callout ── */
-.crossing-callout {
-  background: linear-gradient(135deg, rgba(232,130,122,.08), rgba(232,130,122,.04));
-  border: 1px solid rgba(232,130,122,.25);
-  border-radius: 20px;
-  padding: 22px 24px;
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  align-items: start;
-}
-.crossing-icon { font-size: 2rem; line-height: 1; }
-.crossing-callout h4 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; color: #f0a8a2; }
-.crossing-callout p { font-size: .88rem; color: var(--muted); }
-.crossing-callout ul { font-size: .86rem; color: var(--muted); padding-left: 18px; display: grid; gap: 4px; margin-top: 8px; }
+.crossing-box{background:rgba(232,128,128,.06);border:1px solid rgba(232,128,128,.25);border-radius:var(--r);padding:22px 24px;margin:16px 0}
+.crossing-box .cb-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.crossing-box .cb-icon{font-size:1.4rem}
+.crossing-box h3{font-size:1.1rem;font-weight:800;color:var(--red)}
+.crossing-box p{font-size:.9rem;color:var(--muted);line-height:1.7}
+.crossing-box ul{list-style:none;margin-top:10px;display:grid;gap:6px}
+.crossing-box li{font-size:.88rem;color:var(--muted);padding-left:16px;position:relative}
+.crossing-box li::before{content:'→';position:absolute;left:0;color:var(--red)}
 
-/* ── Guest week block ── */
-.guest-block {
-  background: var(--panel);
-  border: 1px solid rgba(122,191,130,.2);
-  border-radius: 22px;
-  overflow: hidden;
-  margin-bottom: 14px;
-}
-.guest-header {
-  padding: 20px 24px 16px;
-  background: rgba(122,191,130,.05);
-  border-bottom: 1px solid rgba(122,191,130,.15);
-}
-.guest-header h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
-.guest-header p { font-size: .88rem; color: var(--muted); }
-.guest-stops { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; padding: 18px 24px; }
-.stop {
-  padding: 12px 14px;
-  background: rgba(255,255,255,.025);
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  font-size: .86rem;
-}
-.stop .sn { font-weight: 700; margin-bottom: 3px; }
-.stop .sd { color: var(--muted); font-size: .8rem; }
+/* ── Summary band ── */
+.summary{background:var(--panel2);border:1px solid var(--lineb);border-radius:var(--r);padding:28px;margin-top:36px}
+.summary h3{font-size:1.2rem;font-weight:800;margin-bottom:16px}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.s-item{padding:14px;border:1px solid var(--line);border-radius:var(--r2);background:rgba(255,255,255,.02)}
+.s-item .sk{font-size:.71rem;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:5px}
+.s-item .sv{font-size:.92rem;font-weight:700}
 
-/* ── Pressure points ── */
-.pressure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 40px; }
-.pressure {
-  padding: 16px 18px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: var(--panel2);
-  font-size: .87rem;
-}
-.pressure strong { display: block; font-size: .93rem; margin-bottom: 6px; }
-.pressure p { color: var(--muted); }
+/* ── Print / foot ── */
+.footnote{margin-top:32px;padding:20px 24px;border-top:1px solid var(--line);font-size:.82rem;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-/* ── Footer ── */
-.footer-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 24px 28px;
-  text-align: center;
+@media(max-width:700px){
+  .leg-body{grid-template-columns:1fr}
+  .leg-top{grid-template-columns:auto 1fr}
+  .leg-tags{display:none}
+  .hero{min-height:70vh;padding:20px}
+  .hero h1{font-size:2.4rem}
+  .stat{padding:10px 14px}
+  .stat .v{font-size:1.1rem}
+  .photo-band{height:220px}
 }
-.footer-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
-.footer-card p { color: var(--muted); font-size: .93rem; max-width: 56ch; margin: 0 auto; }
-
-/* ── Map section ── */
-.map-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  overflow: hidden;
-  margin-bottom: 14px;
-}
-.map-card img { width: 100%; display: block; }
-.map-label {
-  padding: 12px 20px;
-  font-size: .82rem;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-}
-
-/* ── Responsive ── */
-@media (max-width: 820px) {
-  .day-card.has-photo { grid-template-columns: 1fr; }
-  .day-photo { height: 200px; }
-  .phases { grid-template-columns: 1fr 1fr; }
-  .detail-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 540px) {
-  .hero { padding: 28px 20px; min-height: 320px; }
-  .phases { grid-template-columns: 1fr; }
+@media print{
+  body{background:#fff;color:#111}
+  .hero{min-height:auto;padding:20px 0}
+  .hero-bg,.hero-overlay{display:none}
+  .photo-band{height:180px}
 }
 </style>
 </head>
 <body>
-
-<!-- ── HERO ── -->
-<header class="hero">
-  <div class="hero-bg">
-    <img src="photo_day1.jpg" alt="Adriatic sailing">
-  </div>
-  <div class="shell hero-content">
-    <p class="eyebrow">Good Vibrations · June–July 2026</p>
-    <h1>Ionian &amp; <em>Adriatic</em></h1>
-    <p class="hero-lede">21 days. Two offshore crossings. One guest week in the Ionian. A proper blue-water circuit — Croatia to Greece and back.</p>
-    <div class="stat-row">
-      <div class="stat"><span class="sv">16 Jun – 6 Jul</span><span class="sk">Window</span></div>
-      <div class="stat"><span class="sv">21 days</span><span class="sk">Total</span></div>
-      <div class="stat"><span class="sv">~500 nm</span><span class="sk">Est. distance</span></div>
-      <div class="stat"><span class="sv">2 crossings</span><span class="sk">Offshore legs</span></div>
-      <div class="stat"><span class="sv">Vrboska</span><span class="sk">Start &amp; end</span></div>
-    </div>
-  </div>
-</header>
-
 <div class="shell">
 
-<!-- ── ROUTE MAP ── -->
-<div class="map-card">
-  <img src="route_map.png" alt="Route map — Croatia to Ionian">
-  <p class="map-label">Route overview — Vrboska → Korčula → Mljet → Dubrovnik/Cavtat → Corfu → Paxos → Lefkada/Preveza (guest week) → Corfu → Dubrovnik → Lopud → Mljet → Korčula → Vrboska</p>
-</div>
-
-<!-- ── PHASE STRIP ── -->
-<div class="section-label"><div class="bar"></div><h2>Four phases</h2><div class="bar"></div></div>
-<div class="phases">
-  <div class="phase phase-outbound">
-    <span class="ph">Phase 1</span>
-    <h4>Outbound</h4>
-    <p>16–19 Jun · 4 days<br>Vrboska → Cavtat</p>
-  </div>
-  <div class="phase phase-ionian">
-    <span class="ph">Phase 2</span>
-    <h4>Ionian</h4>
-    <p>19 Jun–2 Jul · 13 days<br>Crossing + guest week + return setup</p>
-  </div>
-  <div class="phase phase-return">
-    <span class="ph">Phase 3</span>
-    <h4>Return crossing</h4>
-    <p>3 Jul · overnight<br>Corfu → Dubrovnik</p>
-  </div>
-  <div class="phase phase-croatia">
-    <span class="ph">Phase 4</span>
-    <h4>Croatia home</h4>
-    <p>4–6 Jul · 3 days<br>Dubrovnik → Vrboska</p>
-  </div>
-</div>
-
-<!-- ── OVERVIEW ── -->
-<div class="section-label"><div class="bar"></div><h2>Overview</h2><div class="bar"></div></div>
-<div class="overview-grid">
-  <div class="ov-card">
-    <div class="ov-icon">🚢</div>
-    <h3>Good Vibrations</h3>
-    <p>55ft Beneteau Oceanis · Yanmar 4JH4-TE · based in Vrboska, Hvar</p>
-  </div>
-  <div class="ov-card">
-    <div class="ov-icon">⚓</div>
-    <h3>Core principle</h3>
-    <p>The two crossings set the schedule. Everything else stays flexible around them.</p>
-  </div>
-  <div class="ov-card">
-    <div class="ov-icon">👥</div>
-    <h3>Guests</h3>
-    <p>Join ~23 Jun in Preveza area. Fly home ~30 Jun. Guest legs: relaxed, 15–25 nm/day.</p>
-  </div>
-  <div class="ov-card">
-    <div class="ov-icon">🌊</div>
-    <h3>Weather window</h3>
-    <p>June is generally good in the Ionian. Watch for Meltemi building from late June. Leave early on offshore days.</p>
-  </div>
-</div>
-
-<!-- ── PHASE 1: OUTBOUND ── -->
-<div class="section-label"><div class="bar"></div><h2>Phase 1 — Outbound · 16–19 Jun</h2><div class="bar"></div></div>
-
-<div class="day-card has-photo">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 1 · Mon 16 Jun</span>
-      <span class="tag tag-harbour">Harbour</span>
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"><img src="photo_day1.jpg" alt="Good Vibrations under sail"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Good Vibrations · 55ft Beneteau Oceanis · June–July 2026</p>
+    <h1>Vrboska to the<br><em>Ionian</em> &amp; back.</h1>
+    <p class="hero-lead">21 days. Two offshore crossings. A week in the Ionian with guests. Croatia on both sides. The plan is structured around the two big passages — everything else stays supple.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="v">21</span><span class="k">days</span></div>
+      <div class="stat"><span class="v">16 Jun – 6 Jul</span><span class="k">window</span></div>
+      <div class="stat"><span class="v">~650 nm</span><span class="k">total miles</span></div>
+      <div class="stat"><span class="v">2</span><span class="k">offshore crossings</span></div>
+      <div class="stat"><span class="v">8 days</span><span class="k">with guests</span></div>
     </div>
-    <h3>Vrboska → Korčula Town</h3>
-    <div class="day-route">30 nm · <span class="day-nm">Harbour berth</span></div>
-    <p class="day-desc">A proper first day: enough miles to feel like you've left, a beautiful destination to arrive at. Don't over-plan it — just sail well and enjoy Korčula in the evening.</p>
-    <div class="detail-grid">
+  </div>
+</section>
+
+<!-- ═══ PHASE 1: CROATIA OUTBOUND ═══ -->
+<div class="phase-header">
+  <div>
+    <p class="eyebrow">Phase 1</p>
+    <h2>Croatia outbound</h2>
+  </div>
+  <span class="phase-badge">16–18 Jun · 3 days</span>
+</div>
+<p class="phase-intro">Three days south through Dalmatia, ending at the staging anchorage for the Corfu crossing. Keep it easy — the point is to arrive rested, not to cram in sightseeing.</p>
+
+<div class="photo-band">
+  <img src="photo_day2.jpg" alt="Dalmatian coast">
+  <div class="photo-caption">Dalmatian coast — old towns, clear water, easy sailing</div>
+</div>
+
+<div class="legs">
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">1</div>
+      <div class="leg-meta">
+        <div class="leg-date">Mon 16 Jun</div>
+        <div class="leg-route">Vrboska → Korčula Town</div>
+        <div class="leg-why">Good opener: enough miles to settle in, a beautiful reward at the end.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">30 nm</span>
+        <span class="tag night">🏛 Harbour</span>
+      </div>
+    </div>
+    <div class="leg-body">
       <div class="detail-box">
         <strong>Plan</strong>
         <ul>
           <li>Early departure from Vrboska</li>
-          <li>Optional swim stop near Badija / Lumbarda if wind and time allow</li>
-          <li>Arrive Korčula with afternoon to walk the old town</li>
+          <li>Optional swim stop near Badija/Lumbarda if conditions allow</li>
+          <li>Arrive Korčula with time to walk the old town before dinner</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
+      <div class="detail-box">
         <strong>Skipper note</strong>
-        <p>Book the harbour berth ahead — it fills in summer. Korčula is worth a relaxed evening dinner ashore.</p>
+        <p>Good first-night harbour. Book ahead if you want certainty — it fills up fast in June.</p>
       </div>
     </div>
   </div>
-  <div class="day-photo">
-    <img src="photo_day1.jpg" alt="Korčula — old town from the water">
-  </div>
-</div>
 
-<div class="day-card has-photo">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 2 · Tue 17 Jun</span>
-      <span class="tag tag-anchor">Anchor</span>
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">2</div>
+      <div class="leg-meta">
+        <div class="leg-date">Tue 17 Jun</div>
+        <div class="leg-route">Korčula → Polače, Mljet</div>
+        <div class="leg-why">Moves the boat south without overreaching. Quiet anchorage before Dubrovnik.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">25 nm</span>
+        <span class="tag night">⚓ Anchor</span>
+      </div>
     </div>
-    <h3>Korčula → Polače, Mljet</h3>
-    <div class="day-route">25 nm · <span class="day-nm">Anchor / buoy</span></div>
-    <p class="day-desc">A calm, scenic leg that moves you south without overreaching. Polače gives you a quiet anchorage in a stunning national park setting — good rest before the push to Cavtat.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
         <strong>Plan</strong>
         <ul>
-          <li>Sail via the Mljet channel — calm, protected water</li>
-          <li>Optional lunch stop at Okuklje if it doesn't slow you too much</li>
-          <li>Anchor at Polače or buoy at Pomena depending on park access</li>
+          <li>Sail via Mljet channel</li>
+          <li>Optional lunch/swim at Okuklje — only if it doesn't slow the day</li>
+          <li>Anchor Polače or Pomena depending on conditions</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
+      <div class="detail-box">
         <strong>Skipper note</strong>
-        <p>Polače is quieter; Pomena has more facilities. Both are beautiful. The park's salt lakes are worth a walk if you anchor early enough.</p>
+        <p>Polače = quieter night. Pomena = more shore life. Both work. Mljet National Park entrance fee applies — pay ashore.</p>
       </div>
     </div>
   </div>
-  <div class="day-photo">
-    <img src="photo_day2.jpg" alt="Mljet — national park anchorage">
-  </div>
-</div>
 
-<div class="day-card has-photo">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 3 · Wed 18 Jun</span>
-      <span class="tag tag-position">Positioning</span>
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">3</div>
+      <div class="leg-meta">
+        <div class="leg-date">Wed 18 Jun</div>
+        <div class="leg-route">Mljet → Cavtat</div>
+        <div class="leg-why">Staging day. The only goal is to arrive rested, fuelled, and ready.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">35 nm</span>
+        <span class="tag night">🏛 Harbour</span>
+        <span class="tag position">Staging</span>
+      </div>
     </div>
-    <h3>Mljet → Cavtat</h3>
-    <div class="day-route">45 nm · <span class="day-nm">Marina or anchor</span></div>
-    <p class="day-desc">This is a staging day, not a sightseeing day. Get to Cavtat in good shape and use the afternoon to prepare for the crossing. Dubrovnik is tempting — only go there if you have a confirmed berth and don't mind the pressure it adds.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
         <strong>Plan</strong>
         <ul>
-          <li>Leave Mljet at a sensible hour</li>
-          <li>Pass Dubrovnik — stop only if berth confirmed and it genuinely serves the trip</li>
-          <li>Arrive Cavtat in the afternoon; fuel up, check weather, rest</li>
+          <li>Straight run south — no detours today</li>
+          <li>Cavtat over Dubrovnik: calmer harbour, easier exit tomorrow</li>
+          <li>Fuel up, provision, check out of Croatia, rest</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
+      <div class="detail-box">
         <strong>Skipper note</strong>
-        <p>Lean towards Cavtat over Dubrovnik. Cavtat is calmer, marina is easier, and you want the boat — and the crew — rested before the overnight passage.</p>
+        <p>Dubrovnik is tempting but it asks too much of this day. Cavtat is the professional choice: easier berth, better departure position, quieter night before the big passage.</p>
       </div>
     </div>
   </div>
-  <div class="day-photo">
-    <img src="photo_day3.jpg" alt="Cavtat — bay before the crossing">
-  </div>
-</div>
 
-<!-- ── CROSSING 1 ── -->
-<div class="crossing-callout">
-  <div class="crossing-icon">🌊</div>
+</div><!-- /legs -->
+
+<!-- ═══ THE CROSSING ═══ -->
+<div class="phase-header">
   <div>
-    <h4>Offshore Crossing 1 — Cavtat → Corfu · ~155 nm · overnight</h4>
-    <p>This is the hinge of the trip. Everything in Phase 1 exists to get you here in good shape. Do not leave on a mediocre forecast — a day's delay at Cavtat costs nothing. A bad crossing costs everything.</p>
-    <ul>
-      <li>Rest in the afternoon · depart late evening (~21:00–23:00)</li>
-      <li>Fuel topped up · food and water for 20+ hours · watch system agreed</li>
-      <li>Paperwork: Albania coastal waters or direct track — check routing options</li>
-      <li>Target: arrive Corfu (Gouvia Marina) in daylight, mid-morning of Day 5</li>
-      <li><strong>Leave only if 36h forecast is genuinely comfortable. Discipline beats schedule.</strong></li>
-    </ul>
+    <p class="eyebrow">Phase 2</p>
+    <h2>The Corfu crossing</h2>
   </div>
+  <span class="phase-badge">19–20 Jun · offshore</span>
 </div>
 
-<!-- ── PHASE 2: IONIAN ── -->
-<div class="section-label"><div class="bar"></div><h2>Phase 2 — Ionian · 19 Jun – 2 Jul</h2><div class="bar"></div></div>
+<div class="crossing-box">
+  <div class="cb-head">
+    <span class="cb-icon">⚠️</span>
+    <h3>This is the hinge of the trip</h3>
+  </div>
+  <p>The Cavtat–Corfu passage (~155 nm) is the biggest decision of the voyage. Everything else in the schedule should serve this leg — not the other way around. Depart only on a genuinely good 36-hour forecast. A one-day delay is far cheaper than a rough crossing.</p>
+  <ul>
+    <li>Check VHF NWS + Windy 48h before departure</li>
+    <li>Brief the crew on watch rotation before leaving the dock</li>
+    <li>Albanian territorial waters: stay 12+ nm off the coast if you transit at night</li>
+    <li>Preferred arrival: Gouvia marina (practical, well-staffed). Old Port if the weather is perfect and you have time.</li>
+  </ul>
+</div>
 
-<div class="day-card has-photo">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 5 · Fri 20 Jun</span>
-      <span class="tag tag-rest">Recovery</span>
-      <span class="tag tag-harbour">Harbour</span>
+<div class="legs">
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">4</div>
+      <div class="leg-meta">
+        <div class="leg-date">Thu 19 Jun · afternoon/evening departure</div>
+        <div class="leg-route">Cavtat → offshore (overnight passage)</div>
+        <div class="leg-why">Rest day until departure. The boat and crew should leave in the best possible shape.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">155 nm</span>
+        <span class="tag crossing">⚓ Crossing</span>
+      </div>
     </div>
-    <h3>Corfu — Arrival &amp; Rest</h3>
-    <div class="day-route">Arrival day · <span class="day-nm">Gouvia Marina</span></div>
-    <p class="day-desc">After a 155 nm overnight, this day is simple: arrive cleanly, check in, sleep. No heroics. The Ionian doesn't start until tomorrow.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
-        <strong>Plan</strong>
+        <strong>Before departure</strong>
         <ul>
-          <li>Enter Gouvia Marina — practical, easy in all conditions</li>
-          <li>Check in with customs if required</li>
-          <li>Light meal, early night</li>
+          <li>Sleep in the morning, rest in the afternoon</li>
+          <li>Fuel, water, food, safety gear check</li>
+          <li>Clear Croatian customs/border</li>
+          <li>Confirm forecast: leave only if it's genuinely comfortable</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
-        <strong>Skipper note</strong>
-        <p>Gouvia is the sensible choice. The Old Port is prettier but more complex after an overnight. Save the pretty arrival for when you're not tired.</p>
+      <div class="detail-box">
+        <strong>Skipper rule</strong>
+        <p>If there is any doubt about the forecast, wait. The schedule has buffer — the Adriatic does not forgive rushing.</p>
       </div>
     </div>
   </div>
-  <div class="day-photo">
-    <img src="photo_day4.jpg" alt="Corfu — Ionian arrival">
-  </div>
-</div>
 
-<div class="day-card">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 6 · Sat 21 Jun</span>
-      <span class="tag tag-anchor">Anchor</span>
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">5</div>
+      <div class="leg-meta">
+        <div class="leg-date">Fri 20 Jun · arrival</div>
+        <div class="leg-route">Offshore → Corfu</div>
+        <div class="leg-why">Arrival day is recovery day. Keep it simple.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag night">🏛 Marina</span>
+      </div>
     </div>
-    <h3>Corfu → Paxos / Lakka</h3>
-    <div class="day-route">28 nm · <span class="day-nm">Anchor in Lakka or Gaios</span></div>
-    <p class="day-desc">The classic first Ionian day — a short, beautiful sail south to one of the loveliest anchorages in the Med. Take it easy.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
-        <strong>Plan</strong>
+        <strong>Arrival</strong>
         <ul>
-          <li>Leave mid-morning after proper rest</li>
-          <li>Stop briefly at Antipaxos if weather is settled and sea is calm</li>
-          <li>Anchor Lakka (prettier, quieter) or Gaios (livelier, more facilities)</li>
+          <li>Gouvia marina: practical, reliable, has everything you need</li>
+          <li>Check into Greece (transit log/crew list)</li>
+          <li>No plans for the evening — just eat and sleep</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
-        <strong>Skipper note</strong>
-        <p>Lakka is one of the best anchorages in the Ionian — a narrow inlet, crystal water, taverna on the quay. Don't rush through it.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="day-card">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 7 · Sun 22 Jun</span>
-      <span class="tag tag-position">Positioning</span>
-    </div>
-    <h3>Paxos → Preveza / Lefkada area</h3>
-    <div class="day-route">45 nm · <span class="day-nm">Dessimi Bay or Vlicho</span></div>
-    <p class="day-desc">A longer positioning day to get within easy reach of Preveza airport for guest pickup. Keep it simple — this isn't a scenic day, it's a logistics day.</p>
-    <div class="detail-grid">
       <div class="detail-box">
-        <strong>Plan</strong>
-        <ul>
-          <li>Leave early</li>
-          <li>Optional brief stop at Sivota (north) if time allows and it doesn't create a late arrival</li>
-          <li>Anchor Dessimi Bay or Vlicho — both practical, calm, near airport</li>
-          <li>Prep boat for guests: tidy, provisions topped up</li>
-        </ul>
-      </div>
-      <div class="detail-box skipper-note">
         <strong>Skipper note</strong>
-        <p>Practicality over romance today. Dessimi Bay is calm and well-protected. Get there with time to sort the boat properly before guests board.</p>
+        <p>Old Port is more beautiful but gets crowded and has awkward stern-to berthing. After an overnight passage, Gouvia is the right call.</p>
       </div>
     </div>
   </div>
+
 </div>
 
-<!-- ── Guest week ── -->
-<div class="guest-block">
-  <div class="guest-header">
-    <div class="day-meta">
-      <span class="day-num">Days 8–15 · Mon 23 – Mon 30 Jun</span>
-      <span class="tag tag-guest">Guest week</span>
-    </div>
-    <h3>Lefkada / Meganisi / Kefalonia / Ithaka loop</h3>
-    <p>Guests fly in ~23 Jun, fly home ~30 Jun. This week is about easy, beautiful sailing — not covering ground. Keep legs in the 15–25 nm range. The Ionian delivers on its own; you don't need to work for it.</p>
-  </div>
-  <div class="guest-stops">
-    <div class="stop">
-      <div class="sn">Meganisi</div>
-      <div class="sd">Vathy or Spartochori — stunning small island, quiet bays, excellent tavernas</div>
-    </div>
-    <div class="stop">
-      <div class="sn">Fiskardo, Kefalonia</div>
-      <div class="sd">The prettiest village in the Ionian — lively, great food, good quay</div>
-    </div>
-    <div class="stop">
-      <div class="sn">Ithaka (Vathy / Kioni)</div>
-      <div class="sd">Homer's island. Vathy is the harbour town; Kioni is the jewel.</div>
-    </div>
-    <div class="stop">
-      <div class="sn">Atokos</div>
-      <div class="sd">Wild, uninhabited, brilliant anchorage — a highlight of the Ionian</div>
-    </div>
-    <div class="stop">
-      <div class="sn">Porto Katsiki / Lefkada west coast</div>
-      <div class="sd">The famous white cliff beach — anchor off, swim in turquoise water</div>
-    </div>
-    <div class="stop">
-      <div class="sn">Nidri, Lefkada</div>
-      <div class="sd">Practical stopover — provisioning, fuel, laundry if needed</div>
-    </div>
-  </div>
-  <div style="padding: 0 24px 18px;">
-    <div class="detail-box skipper-note" style="max-width: 600px;">
-      <strong>Guest week principle</strong>
-      <p>Prioritise short legs, swimming, good evenings ashore. Don't overload days with both a long passage and major sightseeing. The Ionian rewards patience — if a place is good, stay an extra night.</p>
-    </div>
-  </div>
-</div>
-
-<div class="day-card">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Days 16–17 · Tue 1 – Wed 2 Jul</span>
-      <span class="tag tag-position">Return setup</span>
-    </div>
-    <h3>Preveza → Paxos → Corfu</h3>
-    <div class="day-route">Day 16: ~45 nm to Paxos · Day 17: ~28 nm to Corfu</div>
-    <p class="day-desc">Two calm days to move the boat back to Corfu and prepare for the return crossing. Use Paxos as a pleasant stop, not a rushed transit. Arrive Corfu with a full day to rest and prepare.</p>
-    <div class="detail-grid">
-      <div class="detail-box">
-        <strong>Plan</strong>
-        <ul>
-          <li>Day 16: Preveza → Paxos (Lakka or Gaios) — enjoy it, don't rush it</li>
-          <li>Day 17: Paxos → Corfu — arrive early, fuel up, check weather</li>
-          <li>Same pre-crossing routine as outbound: rest, food, watch system</li>
-        </ul>
-      </div>
-      <div class="detail-box skipper-note">
-        <strong>Skipper note</strong>
-        <p>Same rule as outbound: the crossing sets the schedule, not the other way around. If the forecast on Day 18 is poor, an extra day in Corfu is not a problem.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── CROSSING 2 ── -->
-<div class="crossing-callout">
-  <div class="crossing-icon">🌊</div>
+<!-- ═══ PHASE 3: IONIAN SOLO ═══ -->
+<div class="phase-header">
   <div>
-    <h4>Offshore Crossing 2 — Corfu → Dubrovnik area · ~155 nm · overnight</h4>
-    <p>Same rules as the outbound crossing. The return leg tends to get less attention — resist that. After 2+ weeks of sailing, fatigue is a factor. Be more conservative, not less.</p>
-    <ul>
-      <li>Leave evening of Day 18 (~3 Jul) on a clean forecast</li>
-      <li>Target: Cavtat / Dubrovnik area by morning of Day 19</li>
-      <li>Prioritise Cavtat over Dubrovnik for arrival — simpler, calmer</li>
-      <li><strong>Do not push a marginal weather window just to get home on schedule.</strong></li>
-    </ul>
+    <p class="eyebrow">Phase 3</p>
+    <h2>Ionian — solo days</h2>
   </div>
+  <span class="phase-badge">21–22 Jun · 2 days</span>
+</div>
+<p class="phase-intro">Two days to decompress from the crossing and position the boat for guest pickup near Preveza/Lefkada airport. Keep it gentle.</p>
+
+<div class="photo-band">
+  <img src="photo_day3.jpg" alt="Ionian waters">
+  <div class="photo-caption">The Ionian — turquoise water, steady breeze, easy anchoring</div>
 </div>
 
-<!-- ── PHASE 4: CROATIA RETURN ── -->
-<div class="section-label"><div class="bar"></div><h2>Phase 4 — Croatia home · 4–6 Jul</h2><div class="bar"></div></div>
+<div class="legs">
 
-<div class="day-card has-photo">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 19 · Sat 4 Jul</span>
-      <span class="tag tag-rest">Recovery</span>
-      <span class="tag tag-harbour">Harbour</span>
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">6</div>
+      <div class="leg-meta">
+        <div class="leg-date">Sat 21 Jun</div>
+        <div class="leg-route">Corfu → Paxos / Lakka</div>
+        <div class="leg-why">Classic easy Ionian day. Beautiful anchorage, no pressure.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">28 nm</span>
+        <span class="tag night">⚓ Anchor</span>
+      </div>
     </div>
-    <h3>Cavtat / Dubrovnik — Rest after landfall</h3>
-    <div class="day-route">Arrival day · <span class="day-nm">Cavtat marina or anchor</span></div>
-    <p class="day-desc">Same as the Corfu arrival — rest first. A Dubrovnik visit is possible if you genuinely want it and have the energy, but don't force it.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
         <strong>Plan</strong>
         <ul>
-          <li>Arrive Cavtat, check in</li>
-          <li>Rest, eat, recover</li>
-          <li>Optional Dubrovnik visit in the afternoon if the boat is sorted and you have energy</li>
+          <li>Late morning departure — no rush</li>
+          <li>Stop at Antipaxos for a swim if the weather is settled</li>
+          <li>Anchor Lakka (prettier) or Gaios (livelier) based on mood</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
-        <strong>Skipper note</strong>
-        <p>After a second overnight crossing, the first priority is rest. Dubrovnik will still be beautiful tomorrow morning.</p>
-      </div>
-    </div>
-  </div>
-  <div class="day-photo">
-    <img src="photo_day5.jpg" alt="Croatia — return sailing">
-  </div>
-</div>
-
-<div class="day-card">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 20 · Sun 5 Jul</span>
-      <span class="tag tag-anchor">Anchor</span>
-    </div>
-    <h3>Dubrovnik area → Lopud or Mljet</h3>
-    <div class="day-route">20–40 nm depending on choice · <span class="day-nm">Anchor</span></div>
-    <p class="day-desc">A beautiful decompression day. Lopud is closer, gentler; Mljet is further but gives you the national park again. Either way: short leg, long swim, good evening.</p>
-    <div class="detail-grid">
       <div class="detail-box">
-        <strong>Options</strong>
-        <ul>
-          <li><strong>Short:</strong> Dubrovnik → Lopud (~8 nm) — old village, sandy beach, relaxed</li>
-          <li><strong>Longer:</strong> Dubrovnik → Polače, Mljet (~40 nm) — national park, more remote</li>
-        </ul>
-      </div>
-      <div class="detail-box skipper-note">
         <strong>Skipper note</strong>
-        <p>Choose based on energy levels after the crossing. Lopud is the easier, more relaxing choice. Mljet is better if you have the legs for it.</p>
+        <p>Paxos fills up fast in summer. Arrive by mid-afternoon for a good spot. Lakka has a tighter entrance — take it slow.</p>
       </div>
     </div>
   </div>
-</div>
 
-<div class="day-card">
-  <div class="day-body">
-    <div class="day-meta">
-      <span class="day-num">Day 21 · Mon 6 Jul</span>
-      <span class="tag tag-harbour">Home</span>
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">7</div>
+      <div class="leg-meta">
+        <div class="leg-date">Sun 22 Jun</div>
+        <div class="leg-route">Paxos → Lefkada / Preveza area</div>
+        <div class="leg-why">Positioning leg before guest pickup. Practicality over romance today.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">45 nm</span>
+        <span class="tag night">⚓ Anchor</span>
+        <span class="tag position">Positioning</span>
+      </div>
     </div>
-    <h3>→ Korčula → Vrboska</h3>
-    <div class="day-route">40–55 nm · <span class="day-nm">Home berth</span></div>
-    <p class="day-desc">The last leg home. Korčula is an optional lunch stop if you're not in a rush — it's worth it. Arrive Vrboska in the afternoon.</p>
-    <div class="detail-grid">
+    <div class="leg-body">
       <div class="detail-box">
         <strong>Plan</strong>
         <ul>
-          <li>Leave after breakfast</li>
-          <li>Optional lunch stop in Korčula Town (~30 nm)</li>
-          <li>Arrive Vrboska mid-afternoon</li>
-          <li>Post-trip checklist: wash sails, engine hours, any jobs noted</li>
+          <li>Early start to cover the miles comfortably</li>
+          <li>Optional stop at Sivota only if time allows</li>
+          <li>Anchor Dessimi Bay or Vlicho — calm, easy, good for boat prep</li>
         </ul>
       </div>
-      <div class="detail-box skipper-note">
+      <div class="detail-box">
         <strong>Skipper note</strong>
-        <p>The last leg should feel easy and good. Don't skip Korčula — it's a lovely way to end a 21-day circuit.</p>
+        <p>Tomorrow guests arrive. Use the afternoon to provision, clean the boat, and get a proper night's sleep. Nydri is convenient for shops but noisy — Dessimi is better for rest.</p>
       </div>
     </div>
   </div>
+
 </div>
 
-<!-- ── PRESSURE POINTS ── -->
-<div class="section-label"><div class="bar"></div><h2>Watch these</h2><div class="bar"></div></div>
-<div class="pressure-grid">
-  <div class="pressure">
-    <strong>🌊 Outbound crossing window</strong>
-    <p>Leave Cavtat only on a solid 36h forecast. A day's delay is free. A bad passage is not.</p>
+<!-- ═══ PHASE 4: GUEST WEEK ═══ -->
+<div class="phase-header">
+  <div>
+    <p class="eyebrow">Phase 4</p>
+    <h2>Guest week</h2>
   </div>
-  <div class="pressure">
-    <strong>🏙 Dubrovnik temptation</strong>
-    <p>Don't make Day 3 a full Dubrovnik day AND a staging day. Pick one. Cavtat is the better staging choice.</p>
+  <span class="phase-badge">23–30 Jun · 8 days</span>
+</div>
+<p class="phase-intro">The heart of the trip. Short legs, beautiful spots, good evenings ashore. The Ionian does this better than anywhere in the Med — don't waste it on long transfer days.</p>
+
+<div class="photo-band">
+  <img src="photo_day4.jpg" alt="Ionian anchorage with guests">
+  <div class="photo-caption">Guest week — Meganisi, Fiskardo, Ithaka, Porto Katsiki</div>
+</div>
+
+<div class="legs">
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">8</div>
+      <div class="leg-meta">
+        <div class="leg-date">Mon 23 Jun · guest arrival</div>
+        <div class="leg-route">Guests arrive via Preveza/Aktio airport</div>
+        <div class="leg-why">Keep this day completely easy — no sailing, just welcome and settle in.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag guests">👥 Guests arrive</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Plan</strong>
+        <ul>
+          <li>Pick up guests from Preveza airport (taxi or dinghy to dock)</li>
+          <li>Short orientation sail or sunset cruise if guests are keen</li>
+          <li>Dinner ashore in Nydri or on the boat</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Don't try to cover miles today. First day with guests should feel effortless — save the impressive sailing for when they've settled in.</p>
+      </div>
+    </div>
   </div>
-  <div class="pressure">
-    <strong>👥 Guest week pacing</strong>
-    <p>Legs over 30 nm with guests add pressure. Keep most days short. Meganisi → Fiskardo → Ithaka is the sweet spot.</p>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">9–10</div>
+      <div class="leg-meta">
+        <div class="leg-date">Tue–Wed 24–25 Jun</div>
+        <div class="leg-route">Lefkada → Meganisi → Fiskardo (Kefalonia)</div>
+        <div class="leg-why">The Ionian at its best: crystalline water, dramatic scenery, superb anchorages.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">15–22 nm/day</span>
+        <span class="tag guests">👥 With guests</span>
+        <span class="tag night">⚓ Mixed</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Suggested stops</strong>
+        <ul>
+          <li>Spartochori / Vathy, Meganisi — tiny island, stunning water</li>
+          <li>Fiskardo, Kefalonia — the prettiest harbour town in the Ionian</li>
+          <li>Swim stops at Ithaka channel if conditions allow</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Fiskardo stern-to on the quay is the classic Ionian experience. Book a table at one of the waterfront restaurants — they fill up fast in late June.</p>
+      </div>
+    </div>
   </div>
-  <div class="pressure">
-    <strong>🌊 Return crossing fatigue</strong>
-    <p>After 2+ weeks, you're more tired than you think. Apply the same weather discipline as the outbound leg — or stricter.</p>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">11–12</div>
+      <div class="leg-meta">
+        <div class="leg-date">Thu–Fri 26–27 Jun</div>
+        <div class="leg-route">Fiskardo → Ithaka (Kioni / Vathy) → Atokos</div>
+        <div class="leg-why">Ithaka is one of the most rewarding stops in the Ionian — Homer's island, worth an overnight.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">12–20 nm/day</span>
+        <span class="tag guests">👥 With guests</span>
+        <span class="tag night">⚓ Anchor</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Suggested stops</strong>
+        <ul>
+          <li>Kioni or Vathy, Ithaka — quiet, beautiful, great tavernas</li>
+          <li>Atokos island — uninhabited, phenomenal anchorage, worth the detour</li>
+          <li>Swim day at Atokos — one of the best in the Ionian</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Atokos: anchor in the main bay, use a stern line if it's busy. Water clarity is exceptional. Don't skip it.</p>
+      </div>
+    </div>
   </div>
-  <div class="pressure">
-    <strong>📅 Schedule buffer</strong>
-    <p>Keep 1 weather day buffer in Corfu on both outbound and return. Don't plan the crossing on the last possible day.</p>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">13–14</div>
+      <div class="leg-meta">
+        <div class="leg-date">Sat–Sun 28–29 Jun</div>
+        <div class="leg-route">Atokos → Meganisi → Porto Katsiki (west Lefkada)</div>
+        <div class="leg-why">Porto Katsiki is the showstopper of the trip — save it for near the end of the guest week.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">20–30 nm/day</span>
+        <span class="tag guests">👥 With guests</span>
+        <span class="tag night">⚓ Anchor</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Suggested stops</strong>
+        <ul>
+          <li>Meganisi again for provisioning and a quiet night</li>
+          <li>Porto Katsiki: anchor close to the white cliffs — unforgettable</li>
+          <li>Egremni (adjacent bay) if Porto Katsiki is too crowded</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Porto Katsiki gets crowded in the afternoon with day boats. Arrive early (before 10am) or stay for sunset when they all leave — both work beautifully.</p>
+      </div>
+    </div>
   </div>
-  <div class="pressure">
-    <strong>⛽ Fuel &amp; provisioning</strong>
-    <p>Top up at Cavtat before outbound crossing and at Preveza before guest week. Don't arrive at a crossing short on fuel.</p>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">15</div>
+      <div class="leg-meta">
+        <div class="leg-date">Mon 30 Jun · guest departure</div>
+        <div class="leg-route">West Lefkada → Nydri/Preveza — guests depart</div>
+        <div class="leg-why">Easy final morning, transfer to airport.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag guests">👥 Guests depart</span>
+        <span class="tag position">Positioning</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Plan</strong>
+        <ul>
+          <li>Morning sail back around Lefkada if time allows</li>
+          <li>Taxi/transfer from Nydri or Preveza to airport</li>
+          <li>Leave afternoon clear for debrief and boat reset</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Check guest flight times — Preveza airport can have limited taxis. Pre-arrange transfers the evening before.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ PHASE 5: RETURN ═══ -->
+<div class="phase-header">
+  <div>
+    <p class="eyebrow">Phase 5</p>
+    <h2>Return crossing &amp; Croatia</h2>
+  </div>
+  <span class="phase-badge">1–6 Jul · 6 days</span>
+</div>
+<p class="phase-intro">Same principle as the outbound: stage the boat properly, cross only on a good forecast, then enjoy a relaxed cruise north through Croatia.</p>
+
+<div class="photo-band">
+  <img src="photo_day5.jpg" alt="Return passage">
+  <div class="photo-caption">Croatia return — Lopud, Mljet, Korčula, back to Vrboska</div>
+</div>
+
+<div class="legs">
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">16–17</div>
+      <div class="leg-meta">
+        <div class="leg-date">Tue–Wed 1–2 Jul</div>
+        <div class="leg-route">Preveza → Paxos → Corfu</div>
+        <div class="leg-why">Retracing the outbound approach, setting up for the return crossing.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">45 + 28 nm</span>
+        <span class="tag night">⚓ / 🏛</span>
+        <span class="tag position">Staging</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Plan</strong>
+        <ul>
+          <li>Paxos: one more stop, not a full sightseeing day</li>
+          <li>Reach Corfu with enough time to provision and rest</li>
+          <li>Check forecast for the return crossing window</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>Same rule as the outbound: the crossing sets the schedule. Don't leave Corfu on a mediocre forecast to "stay on track." A one-day buffer exists for exactly this reason.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">18</div>
+      <div class="leg-meta">
+        <div class="leg-date">Thu 3 Jul · overnight departure</div>
+        <div class="leg-route">Corfu → overnight passage → Dubrovnik area</div>
+        <div class="leg-why">The return crossing. Same respect as the outbound.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">~155 nm</span>
+        <span class="tag crossing">⚓ Crossing</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Plan</strong>
+        <ul>
+          <li>Depart late afternoon for overnight passage</li>
+          <li>Watch rotation: same as outbound</li>
+          <li>Target landfall: Cavtat or Lopud area</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>The meltemi builds in July — check if there's any NW fetch developing. An earlier departure (before it builds) is often better than waiting for perfect conditions that may not come.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="leg">
+    <div class="leg-top">
+      <div class="leg-num">19–21</div>
+      <div class="leg-meta">
+        <div class="leg-date">Fri–Sun 4–6 Jul</div>
+        <div class="leg-route">Lopud / Mljet → Korčula → Vrboska</div>
+        <div class="leg-why">Relaxed decompression sail north. You know these waters — enjoy them.</div>
+      </div>
+      <div class="leg-tags">
+        <span class="tag nm">20–30 nm/day</span>
+        <span class="tag night">⚓ Mixed</span>
+      </div>
+    </div>
+    <div class="leg-body">
+      <div class="detail-box">
+        <strong>Suggested stops</strong>
+        <ul>
+          <li>Lopud or Šipan: quiet overnight after crossing landfall</li>
+          <li>Mljet (Polače or Pomena) if time allows</li>
+          <li>Korčula Town: good final stop before home</li>
+          <li>Home to Vrboska via Hvar channel</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <strong>Skipper note</strong>
+        <p>This section is already the best part of the original plan. Keep it flexible — if you're tired, shorter legs. If you're energised, push a bit further. No pressure: you're almost home.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ SUMMARY ═══ -->
+<div class="summary">
+  <h3>Trip at a glance</h3>
+  <div class="summary-grid">
+    <div class="s-item"><div class="sk">Dates</div><div class="sv">16 Jun – 6 Jul 2026</div></div>
+    <div class="s-item"><div class="sk">Duration</div><div class="sv">21 days</div></div>
+    <div class="s-item"><div class="sk">Total miles</div><div class="sv">~650 nm</div></div>
+    <div class="s-item"><div class="sk">Big crossings</div><div class="sv">2 × ~155 nm offshore</div></div>
+    <div class="s-item"><div class="sk">Guest week</div><div class="sv">23–30 Jun (8 days)</div></div>
+    <div class="s-item"><div class="sk">Guest airport</div><div class="sv">Preveza/Aktio (PVK)</div></div>
+    <div class="s-item"><div class="sk">Boat</div><div class="sv">Good Vibrations, Beneteau 55ft</div></div>
+    <div class="s-item"><div class="sk">Home port</div><div class="sv">Vrboska, Hvar, Croatia</div></div>
   </div>
 </div>
 
-<!-- ── FOOTER ── -->
-<div class="footer-card">
-  <h3>The trip is good. The crossings are the hard edges. Everything else can flex.</h3>
-  <p>Two offshore passages, eight days of pure Ionian sailing, a proper guest week, and a clean circuit back home. Sail it well.</p>
+<div class="footnote">
+  <span>Good Vibrations — Ionian 2026 · Prepared by Villi</span>
+  <span>v4 · March 2026 — do not overwrite v3</span>
 </div>
 
-</div><!-- /.shell -->
+</div><!-- /shell -->
 </body>
 </html>
