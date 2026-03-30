@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_64906b6058e0a5cb78dff1fb769a042f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_64906b6058e0a5cb78dff1fb769a042f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_64906b6058e0a5cb78dff1fb769a042f = L.map(
+                "map_64906b6058e0a5cb78dff1fb769a042f",
+                {
+                    center: [43.1, 17.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fa34eacae327872fa540ac2e0c40bbb6 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "CartoDB",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fa34eacae327872fa540ac2e0c40bbb6.addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var poly_line_1be7a8041fcd7cff7e5bdf62409db54f = L.polyline(
+                [[43.488501, 16.416064], [43.342174, 16.418491], [43.2385, 16.3457], [43.084808, 16.320196], [43.02806, 16.839582], [42.97481, 17.087139], [42.939285, 17.237615], [42.772042, 17.684189], [42.6272, 18.0047]],
+                {"bubblingMouseEvents": true, "color": "#1e6fad", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#1e6fad", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var circle_marker_53ad9097101ff6619ce9b5887ddeadfc = L.circleMarker(
+                [43.185, 16.597],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+        var popup_63953f3d4070c687dd8b02756c345a0a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b3fbf69b5de32ddd0a3c74a25d0cd731 = $(`<div id="html_b3fbf69b5de32ddd0a3c74a25d0cd731" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial;min-width:200px'>         <b>Day 1</b><br>         [Anchor] Anchorage — Stari Grad Bay, Hvar<br>         <hr style='margin:4px 0'>         🛶 22 nm · 4h22m<br>         [Swim] Palmižana Cove (Pakleni Islands)<br>         [Lunch] Restaurant Meneghello, Palmižana<br>         <i style='font-size:11px'>Well-protected bay, UNESCO old town, excellent tavernas in Stari Grad village.</i>         </div></div>`)[0];
+                popup_63953f3d4070c687dd8b02756c345a0a.setContent(html_b3fbf69b5de32ddd0a3c74a25d0cd731);
+            
+        
+
+        circle_marker_53ad9097101ff6619ce9b5887ddeadfc.bindPopup(popup_63953f3d4070c687dd8b02756c345a0a)
+        ;
+
+        
+    
+    
+            var marker_97016946b40a78e79518ed458b220221 = L.marker(
+                [43.185, 16.597],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var div_icon_cbcca759e9895b82466459de155833df = L.divIcon({
+  "html": "\u003cdiv style=\"font-weight:bold;font-size:13px;color:white;text-align:center;margin-top:1px\"\u003e1\u003c/div\u003e",
+  "iconSize": [28, 28],
+  "iconAnchor": [14, 14],
+  "className": "empty",
+});
+        
+    
+                marker_97016946b40a78e79518ed458b220221.setIcon(div_icon_cbcca759e9895b82466459de155833df);
+            
+    
+            var circle_marker_136036b6004e33694b376980cf11823a = L.circleMarker(
+                [43.059, 16.18],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+        var popup_7e6bf5d7deaf2a426a61506dec7eb526 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9bfbaba9a177860a102fad897ac6a7d5 = $(`<div id="html_9bfbaba9a177860a102fad897ac6a7d5" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial;min-width:200px'>         <b>Day 2</b><br>         [Anchor] Anchorage — Vis Town / Komiža<br>         <hr style='margin:4px 0'>         🛶 18 nm · 3h30m<br>         [Swim] Stiniva Cove (most beautiful beach in Adriatic)<br>         [Lunch] Konoba Jastožera, Komiža (lobster house — book ahead!)<br>         <i style='font-size:11px'>Vis is the most remote Croatian island — unspoilt, excellent fish restaurants. Anchor in Vis town harbour or Komiža on the west side.</i>         </div></div>`)[0];
+                popup_7e6bf5d7deaf2a426a61506dec7eb526.setContent(html_9bfbaba9a177860a102fad897ac6a7d5);
+            
+        
+
+        circle_marker_136036b6004e33694b376980cf11823a.bindPopup(popup_7e6bf5d7deaf2a426a61506dec7eb526)
+        ;
+
+        
+    
+    
+            var marker_c440074c70e49d987e9ba96e17308f8a = L.marker(
+                [43.059, 16.18],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var div_icon_2ae7648465ce7828c043486896e04c48 = L.divIcon({
+  "html": "\u003cdiv style=\"font-weight:bold;font-size:13px;color:white;text-align:center;margin-top:1px\"\u003e2\u003c/div\u003e",
+  "iconSize": [28, 28],
+  "iconAnchor": [14, 14],
+  "className": "empty",
+});
+        
+    
+                marker_c440074c70e49d987e9ba96e17308f8a.setIcon(div_icon_2ae7648465ce7828c043486896e04c48);
+            
+    
+            var circle_marker_e9b33910d84a93da0fdedaee9a5bb8e2 = L.circleMarker(
+                [42.96, 17.137],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+        var popup_cd6f859f0c9f7c1c4131dffe9ebd498c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6b7ab7529b15c9335f674832b4d45f5d = $(`<div id="html_6b7ab7529b15c9335f674832b4d45f5d" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial;min-width:200px'>         <b>Day 3</b><br>         [Marina] Marina / Town Quay — Korčula Old Town<br>         <hr style='margin:4px 0'>         🛶 21 nm · 4h11m<br>         [Swim] Lumbarda beaches (5nm east of Korčula)<br>         [Lunch] LD Restaurant, Korčula<br>         <i style='font-size:11px'>Medieval walled town, birthplace of Marco Polo. Town quay or anchor nearby. Worth a harbour night here — spend evening in the old town.</i>         </div></div>`)[0];
+                popup_cd6f859f0c9f7c1c4131dffe9ebd498c.setContent(html_6b7ab7529b15c9335f674832b4d45f5d);
+            
+        
+
+        circle_marker_e9b33910d84a93da0fdedaee9a5bb8e2.bindPopup(popup_cd6f859f0c9f7c1c4131dffe9ebd498c)
+        ;
+
+        
+    
+    
+            var marker_6b05b0bec1a8910d8ff448c1cebc8acb = L.marker(
+                [42.96, 17.137],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var div_icon_6500f9af76f33f9b24527c582d4e46cb = L.divIcon({
+  "html": "\u003cdiv style=\"font-weight:bold;font-size:13px;color:white;text-align:center;margin-top:1px\"\u003e3\u003c/div\u003e",
+  "iconSize": [28, 28],
+  "iconAnchor": [14, 14],
+  "className": "empty",
+});
+        
+    
+                marker_6b05b0bec1a8910d8ff448c1cebc8acb.setIcon(div_icon_6500f9af76f33f9b24527c582d4e46cb);
+            
+    
+            var circle_marker_ee171ad0106e8f235dca8a82b4e7dbbb = L.circleMarker(
+                [42.982, 17.388],
+                {"bubblingMouseEvents": true, "color": "#27ae60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27ae60", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+        var popup_ceb3b1d9e41cd3dd5b69afb43a715d69 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0422cc4a4372db1c8960930a1589c983 = $(`<div id="html_0422cc4a4372db1c8960930a1589c983" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial;min-width:200px'>         <b>Day 4</b><br>         [Anchor] Anchorage — Polače Bay, Mljet National Park<br>         <hr style='margin:4px 0'>         🛶 21 nm · 4h11m<br>         [Swim] Mljet National Park saltwater lakes<br>         [Lunch] Konoba Stermasi, Polače village<br>         <i style='font-size:11px'>Anchor in the bay at Polače — stunning National Park setting. Entrance to the park lakes nearby. Very protected, excellent holding.</i>         </div></div>`)[0];
+                popup_ceb3b1d9e41cd3dd5b69afb43a715d69.setContent(html_0422cc4a4372db1c8960930a1589c983);
+            
+        
+
+        circle_marker_ee171ad0106e8f235dca8a82b4e7dbbb.bindPopup(popup_ceb3b1d9e41cd3dd5b69afb43a715d69)
+        ;
+
+        
+    
+    
+            var marker_85470c11c22f2b982a8ca3ee21c8dae6 = L.marker(
+                [42.982, 17.388],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var div_icon_2e897a6dd616800aaabf082247e9f397 = L.divIcon({
+  "html": "\u003cdiv style=\"font-weight:bold;font-size:13px;color:white;text-align:center;margin-top:1px\"\u003e4\u003c/div\u003e",
+  "iconSize": [28, 28],
+  "iconAnchor": [14, 14],
+  "className": "empty",
+});
+        
+    
+                marker_85470c11c22f2b982a8ca3ee21c8dae6.setIcon(div_icon_2e897a6dd616800aaabf082247e9f397);
+            
+    
+            var circle_marker_cf13fa26c19cb5624f7a53da6f909b0e = L.circleMarker(
+                [42.739, 17.868],
+                {"bubblingMouseEvents": true, "color": "#2980b9", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2980b9", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+        var popup_7efa75ae7753b3287a392318cbba162c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_91aec667515cd67cf14df7fb4fb7ddb0 = $(`<div id="html_91aec667515cd67cf14df7fb4fb7ddb0" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial;min-width:200px'>         <b>Day 5</b><br>         [Anchor] Anchorage — Šipan Island, Elaphiti<br>         <hr style='margin:4px 0'>         🛶 24 nm · 4h49m<br>         [Swim] Lopud Island beach (detour 3nm) — sandy, rare in Croatia<br>         [Lunch] Obala Restaurant, Šipanska Luka<br>         <i style='font-size:11px'>Šipan is the largest Elaphiti island — anchor in Šipanska Luka. Quiet, authentic, no mass tourism. Perfect last night before Dubrovnik.</i>         </div></div>`)[0];
+                popup_7efa75ae7753b3287a392318cbba162c.setContent(html_91aec667515cd67cf14df7fb4fb7ddb0);
+            
+        
+
+        circle_marker_cf13fa26c19cb5624f7a53da6f909b0e.bindPopup(popup_7efa75ae7753b3287a392318cbba162c)
+        ;
+
+        
+    
+    
+            var marker_9f017cc5682597108aba9767f906bcfc = L.marker(
+                [42.739, 17.868],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var div_icon_4fa196e42d3c1ae685f4f7440381e040 = L.divIcon({
+  "html": "\u003cdiv style=\"font-weight:bold;font-size:13px;color:white;text-align:center;margin-top:1px\"\u003e5\u003c/div\u003e",
+  "iconSize": [28, 28],
+  "iconAnchor": [14, 14],
+  "className": "empty",
+});
+        
+    
+                marker_9f017cc5682597108aba9767f906bcfc.setIcon(div_icon_4fa196e42d3c1ae685f4f7440381e040);
+            
+    
+            var marker_e9cbcce4c43536300afb8025d880cef1 = L.marker(
+                [43.508, 16.439],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var icon_80988ee73c2b9a267241f2c04940b4cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c8bcf8fa80982e805dae89613a1917d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70034b8b639ad33d9b50d2c64a50247c = $(`<div id="html_70034b8b639ad33d9b50d2c64a50247c" style="width: 100.0%; height: 100.0%;">Start: Split</div>`)[0];
+                popup_c8bcf8fa80982e805dae89613a1917d8.setContent(html_70034b8b639ad33d9b50d2c64a50247c);
+            
+        
+
+        marker_e9cbcce4c43536300afb8025d880cef1.bindPopup(popup_c8bcf8fa80982e805dae89613a1917d8)
+        ;
+
+        
+    
+    
+                marker_e9cbcce4c43536300afb8025d880cef1.setIcon(icon_80988ee73c2b9a267241f2c04940b4cf);
+            
+    
+            var marker_ffb4792850993779244f9a60d74b7ff2 = L.marker(
+                [42.648, 18.094],
+                {
+}
+            ).addTo(map_64906b6058e0a5cb78dff1fb769a042f);
+        
+    
+            var icon_c52a06e0addd6107bc274ea699490c53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "anchor",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_019d6f8e70e7a91f81ad212fe437526c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfd5c9aa03d8be18cda3b8db99a4018f = $(`<div id="html_bfd5c9aa03d8be18cda3b8db99a4018f" style="width: 100.0%; height: 100.0%;">End: Dubrovnik</div>`)[0];
+                popup_019d6f8e70e7a91f81ad212fe437526c.setContent(html_bfd5c9aa03d8be18cda3b8db99a4018f);
+            
+        
+
+        marker_ffb4792850993779244f9a60d74b7ff2.bindPopup(popup_019d6f8e70e7a91f81ad212fe437526c)
+        ;
+
+        
+    
+    
+                marker_ffb4792850993779244f9a60d74b7ff2.setIcon(icon_c52a06e0addd6107bc274ea699490c53);
+            
+</script>
+</html>
